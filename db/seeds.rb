@@ -20,7 +20,7 @@ puts "5 SKills created"
 
 9.times do |portfolio|
     Portfolio.create!(
-        title:"Portfolio new",
+        title:"Portfolio Title",
         subtitle:"whatver #{portfolio}",
         body:"It's been a while since I've reached out to you and I wanted to share something special that I've put together. 
         One of the most top questions I get when I comes to building Ruby on Rails API applications that communicate with a React JS 
