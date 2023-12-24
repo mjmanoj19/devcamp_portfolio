@@ -1,11 +1,12 @@
 <h1> Portfolio Contents </h1>
 
 <% @portfolio_item.each do |portfolio_each| %>
+    <p>Portfolio count <%= portfolio_each.id %> </p>
     <p><%= portfolio_each.title %></p>
     <p><%= portfolio_each.subtitle %></p>
     <p><%= portfolio_each.body %></p>
-    <p><%=image_tag portfolio_each.main_img %></p>
-    #<p><%=image_tag portfolio_each.thumb_img %></p>
+    <%=image_tag portfolio_each.main_img unless portfolio_each.main_img.nil?  %>
+    
 <% end %>
 
 
