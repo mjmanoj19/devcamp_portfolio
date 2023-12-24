@@ -2,11 +2,14 @@
 <%= link_to "Create new Portfolio", new_portfolio_path %>
 <% @portfolio_item.each do |portfolio_each| %>
     <p>Portfolio count <%= portfolio_each.id %> </p>
-    <p><%= link_to portfolio_each.title, portfolio_path(portfolio_each.id) %></p>
+    <p><%= link_to portfolio_each.title, portfolio_path(portfolio_each) %></p>
     <p><%= portfolio_each.subtitle %></p>
     <p><%= portfolio_each.body %></p>
     <%=image_tag portfolio_each.main_img unless portfolio_each.main_img.nil?  %>
-    <p> <%= link_to "Edit this Portfolio", edit_portfolio_path(portfolio_each.id) %> </p>
+    <p> <%= link_to "Edit this Portfolio", edit_portfolio_path(portfolio_each) %> </p>
+    <%= link_to "Destroy this Portfolio", portfolio_path(portfolio_each), method: :delete %>
+    
+    
     <hr>
     
 <% end %>
